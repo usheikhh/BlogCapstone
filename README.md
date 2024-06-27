@@ -1,6 +1,3 @@
-<p align="center">
- <img width=400px height=400px src="/public/styles/Screenshot.jpg" alt="Project logo">
-</p>
 
 <h3 align="center">Capstone Project: Online Blog </h3>
 
