@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit blog</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <h1>Blog Title: <%=key%></h1>
+
+    <form action="/blogs/<%=key%>" method="POST">
+        <label for="newValue">edit blog:</label>
+        <input type="text" id="newValue" name="newValue">
+        <button type="submit">update</button>
+    </form>
+
+    <%- include("partials/footer.ejs") %>
+    
+    
+</body>
+</html>

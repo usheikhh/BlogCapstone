@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <h1>Create a new blog post</h1>
+    <form action = "/blogs" method = "POST" name = "blogform" >
+        <input type="text" name="title" placeholder="title your entry"><br><br>
+        <textarea name="content" rows="10" cols="30" placeholder="type away"></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <%function getLastKey(dictionary){
+        let keys = Object.keys(dictionary);
+        return keys[keys.length-1];
+    } %>
+
+    <% if(locals.dictionary && Object.keys(dictionary).length > 0){ %>
+        <h1>Your Latest Blog: </h1>
+             <h1><%= getLastKey(dictionary)%>: <%= dictionary[getLastKey(dictionary)] %></h1>
+    <% } %>
+    
+    
+  <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
